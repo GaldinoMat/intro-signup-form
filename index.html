@@ -33,22 +33,74 @@
         </button>
       </div>
       <div class="form-container">
-        <form action="#" aria-label="Sign-up form">
-          <div class="input-container">
-            <input type="text" placeholder="First Name" aria-label="First name input"/>
-            <img src="images/icon-error.svg" alt="" />
+        <form action="submit" id="form" aria-label="Sign-up form">
+          <div class="inputs-warning">
+            <div class="input-container">
+              <input
+                type="text"
+                placeholder="First Name"
+                aria-label="First name input"
+                class="text-input"
+              />
+              <img
+                src="images/icon-error.svg"
+                alt=""
+                class="warning-img invisible"
+              />
+            </div>
+            <em class="warning invisible">First Name cannot be empty</em>
           </div>
-          <div class="input-container">
-            <input type="text" placeholder="Last Name" aria-label="Last name input"/>
-            <img src="images/icon-error.svg" alt="" />
+          <div class="inputs-warning">
+            <div class="input-container">
+              <input
+                type="text"
+                placeholder="Last Name"
+                aria-label="Last name input"
+                class="text-input"
+              />
+              <img
+                src="images/icon-error.svg"
+                alt=""
+                class="warning-img invisible"
+              />
+            </div>
+            <em class="warning invisible">Last Name cannot be empty</em>
           </div>
-          <div class="input-container">
-            <input type="text" id="email-input" placeholder="Email Address" aria-label="Email input"/>
-            <img src="images/icon-error.svg" alt="" />
+          <div class="inputs-warning">
+            <div class="input-container">
+              <input
+                type="text"
+                placeholder="Email Address"
+                aria-label="Email input"
+                id="email-input"
+                class="text-input"
+              />
+              <img
+                src="images/icon-error.svg"
+                alt=""
+                id="email-warning"
+                class="warning-img invisible"
+              />
+            </div>
+            <em class="warning invisible email"
+              >Looks like this is not an email</em
+            >
           </div>
-          <div class="input-container">
-            <input type="text" placeholder="Password" aria-label="Password input"/>
-            <img src="images/icon-error.svg" alt="" />
+          <div class="inputs-warning">
+            <div class="input-container">
+              <input
+                type="text"
+                placeholder="Password"
+                aria-label="Password input"
+                class="text-input"
+              />
+              <img
+                src="images/icon-error.svg"
+                alt=""
+                class="warning-img invisible"
+              />
+            </div>
+            <em class="warning invisible">Password cannot be empty</em>
           </div>
           <input
             type="submit"
@@ -71,5 +123,6 @@
         >. Coded by <a href="#">Galdino</a>.
       </p>
     </footer>
+    <script src="app.js"></script>
   </body>
 </html>

@@ -1,6 +1,8 @@
 :root {
   --background-red: hsl(0, 100%, 74%);
   --submit-button-green: hsl(154, 59%, 51%);
+  --submit-button-dropshadow: hsl(154, 48%, 48%);
+  --submit-button-selection: hsl(154, 65%, 68%);
   --trial-button-blue: hsl(248, 32%, 49%);
   --placeholder-dark-blue: hsl(249, 10%, 26%);
   --font-grayish-blue: hsl(246, 25%, 77%);
@@ -34,6 +36,7 @@ button,
 button,
 #submit-button {
   font-size: 1.0625rem;
+  cursor: pointer;
 }
 
 input,
@@ -95,9 +98,14 @@ input::placeholder {
   border-radius: 0.625rem;
 }
 
+.inputs-warning {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
 .input-container {
   width: 100%;
-  margin-bottom: 0.9375rem;
   padding: 0.9375rem;
   display: flex;
   justify-content: space-between;
@@ -107,10 +115,8 @@ input::placeholder {
 
 .input-container input {
   width: 100%;
-}
-
-.input-container img {
-  opacity: 0;
+  color: var(--background-red);
+  font-weight: 700;
 }
 
 #submit-button {
@@ -119,6 +125,13 @@ input::placeholder {
   font-weight: 600;
   background-color: var(--submit-button-green);
   border-radius: 0.3125rem;
+  box-shadow: 0px 5px 0px 0px var(--submit-button-dropshadow);
+  transition: linear 0.1s;
+}
+
+#submit-button:hover {
+  background-color: var(--submit-button-selection);
+  box-shadow: 0px 5px 0px 0px var(--submit-button-green);
 }
 
 .form-container p {
@@ -130,6 +143,26 @@ input::placeholder {
 
 .form-container p a {
   color: var(--background-red);
+}
+
+.warning {
+  color: var(--background-red);
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin: 0.3125rem 0 0.625rem 0;
+}
+
+.invisible {
+  opacity: 0;
+}
+
+.visible {
+  opacity: 1;
+}
+
+.warning,
+.warning-img {
+  transition: linear 0.1s;
 }
 
 @media (min-width: 700px) {
