@@ -17,7 +17,7 @@
 
 body {
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   font-family: "Poppins", sans-serif;
   text-align: center;
   background-color: var(--background-red);
@@ -59,6 +59,10 @@ a {
   color: var(--font-grayish-blue);
 }
 
+footer {
+  margin-top: 0.625rem;
+}
+
 .button-container,
 .form-container {
   box-shadow: 0px 8px 0px 0px rgba(0, 0, 0, 0.1);
@@ -70,7 +74,7 @@ input::placeholder {
 
 .container {
   width: fit-content;
-  margin: 3.75rem 1.5625rem;
+  margin: 1.5625rem;
 }
 
 .text-container {
@@ -119,9 +123,11 @@ input::placeholder {
 
 .input-container {
   width: 100%;
-  padding: 0.9375rem;
+  height: 2.5rem;
+  padding: 0 0.9375rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   border: 0.1px solid var(--font-grayish-blue);
   border-radius: 0.3125rem;
 }
@@ -130,6 +136,10 @@ input::placeholder {
   width: 100%;
   color: var(--background-red);
   font-weight: 700;
+}
+
+.input-container img {
+  width: 1.5rem;
 }
 
 #submit-button {
@@ -183,6 +193,11 @@ input::placeholder {
   body {
     background-image: url("images/bg-intro-desktop.png");
   }
+
+  footer {
+    margin-top: 0;
+  }
+
   .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -192,7 +207,6 @@ input::placeholder {
       "text-container button-container"
       "text-container form-container";
     width: 40.625rem;
-    margin: 2.5rem 1.5625rem;
   }
 
   .text-container {
@@ -217,8 +231,24 @@ input::placeholder {
   .button-container {
     grid-area: button-container;
   }
+
   .form-container {
     grid-area: form-container;
+    padding: 1.875rem 2.5rem;
+  }
+
+  .input-container {
+    height: 3.125rem;
+  }
+
+  .input-container input {
+    height: 100%;
+    margin: 0.3125rem;
+    padding: 0.3125rem;
+  }
+
+  .form-container p {
+    margin: 0.9375rem 0.625rem 0 0.625rem;
   }
 }
 
